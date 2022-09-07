@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Aula 62</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// valores por referencia
+		//                0      1       2
+		const nomes = ['Kadu','Maria','Zinha'];
+		// strings, obetos, funcoes, numeros
+		// const nomes = new Array('Kadu','Maria','Zinha');
+		// quando fazemos uma variavel receber o mesmo arrary e damos um pop nele, eles apontam
+		// pros mesmo luggares de memoria ****sempre sembrar disso
+		nomes[2] = 'João'; 
+		delete nomes[2];
+		nomes[2] = 'Vitão'; 
+		const novo = [...nomes];
+		const removidoFinal = novo.pop();
+		const removidoInicio = novo.shift();
+		const adicionadoFinal = novo.push('João', 'Beto', 'Trigliceridio');
+		const adicionadoInicio = novo.unshift('Pipoca', 'Karalho!', 'buceta');
+		console.log(nomes);
+		console.log(novo, removidoFinal);
+		console.log(nomes.length);
+		console.log(novo.slice(1,4));
+		console.log(novo.slice(1,-1));
+
+		const nomeCompleto = 'Carlos Eduardo de Menezes Maia';
+		const nomesDeCompleto = nomeCompleto.split(' ');
+		const nomesDeNovo = nomesDeCompleto.join(' ');
+		console.log(nomesDeCompleto);
+		console.log(nomesDeNovo);
+	</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+
+<body>
+    <script>
+        // return
+        // retorna um valor
+        // terminar a função
+
+        function soma(a, b) {
+            return a + b;
+        }
+
+        function soma2(a, b) {
+            console.log(a + b);
+        }
+
+        soma2(5, 2);
+
+        document.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'red';
+        });
+
+        function criaPessoa(nome, sobrenome) {
+            return { nome, sobrenome };
+        }
+        const p1 = criaPessoa('Luiz', 'Otávio');
+        const p2 = {
+            some: 'Carlos',
+            sobrenome: 'Maia'
+        }
+        console.log(p1);
+        console.log(p2);
+
+        function falaFrase(comeco) {
+            function falaResto(resto) {
+                return comeco + ' ' + resto;
+            }
+            return falaResto;
+        }
+
+        const olaMundo = falaFrase('Olá');
+        console.log(olaMundo('mundo!'));
+
+        // function duplpica(n) {
+        //     return n * 2;
+        // }
+        // function triploca(n) {
+        //     return n * 3;
+        // }
+        // function quadriplica(n) {
+        //     return n * 4;
+        // }
+        function criaMultiplicador(multiplicador) {
+            // multiplicafdor
+            return function multiplicacao(n) {
+                return n * multiplicador;
+            }
+        }
+
+        const duplica = criaMultiplicador(2);
+        const triploca = criaMultiplicador(3);
+        const quadriplica = criaMultiplicador(4);
+        // podemos retornar qualquer coisa na funcao
+        // doidera!!!!
+        console.log(duplica(2));
+        console.log(triploca(2));
+        console.log(quadriplica(2));
+    </script>
+</body>
+
+</html>

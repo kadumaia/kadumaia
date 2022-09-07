@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Métodos Splice</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//               -6     -5      -4        -3        -2     -1
+		//                0      1       2         3         4      5
+		//
+		const nomes = ['Maria','Jão','Eduardo','Gabriel','Felipe','Kaio','Lucas','Bruno','Luana','Rozi','Ricardo']
+
+		//nomes.splice(indice, delete,elem1,elem2,elem3);
+		//poo
+ 		const removidos = nomes.splice(3,2, 'Kadu', 'Luiz');
+ 		console.log(nomes, removidos)
+	</script>
+</body>
+</html>
