@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <div class="logo">
-    <svg width="400px" height="400px" viewBox="0 0 767 765" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    <svg viewBox="250 300 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink">
         <path
             d="M363.18565,477.432986 C364.747265,479.073808 411.065062,494.81454 411.065062,494.81454 C418.147852,499.132082 415.091475,510.16215 403.554347,508.634364 C392.017218,507.106578 351.587043,496.188317 351.587043,496.188318 C344.06085,489.069807 348.873132,471.988342 363.18565,477.432986 Z"
@@ -565,7 +565,7 @@
 <section class="informacoes">
     <div>
         <p>Total</p>
-        <span id="total">0</span>
+        <span id="total"></span>
     </div>
     <div>
         <p>Distancia média:</p>
@@ -578,10 +578,15 @@
 </section>
 
 <section class="progresso">
-    <h3>Foco semanal: <span id="progessoTotal">0</span> / <span id="alvo"> kilometros</span>
+    <h3>Maior distancia da semana: <span id="progessoTotal">0</span> / <span id="alvo"></span> kilometros
     </h3>
-    <div class="wrapperCirculoEntradas"></div>
-    <!-- A treta começa aqui!-->
+    <div class="wrapperCirculoEntradas">
+        <div id="progressoCirculo">
+            <div id="centroProgesso">
+                
+            </div>
+        </div>
+    </div>
 </section>
 
 <body>
