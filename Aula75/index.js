@@ -32,6 +32,35 @@ Produto.prototype.aumento = function (percentual) {
 
 const p1 = new Produto("Camiseta", 50);
 
+//leteral
+const p2 = {
+  nome: "Caneca",
+  preco: 15,
+};
+Object.setPrototypeOf(p2, Produto.prototype);
+
+p2.aumento(10);
+
 //p1.desconto(100);
 //p1.aumento(100);
 console.log(p1);
+console.log(p2);
+console.log("-------------------------------------------");
+
+const p3 = Object.create(Produto.prototype, {
+  preco: {
+    writable: true,
+    configurable: true,
+    enumerable: true,
+    value: 99,
+  },
+  tamanho2: {
+    writable: true,
+    configurable: true,
+    enumerable: true,
+    value: 42,
+  },
+});
+p3.preco = 113;
+p3.aumento(10);
+console.log(p3);
